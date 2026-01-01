@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Marksheet</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .marksheet {
+            width: 820px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            padding: 30px 40px;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        .header p {
+            margin: 4px 0;
+            color: #555;
+        }
+
+        .student-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 30px;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        .info-box {
+            background: #f5f7fb;
+            padding: 10px 12px;
+            border-radius: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        table thead {
+            background: #2c3e50;
+            color: #ffffff;
+        }
+
+        table tbody tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .summary {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 18px;
+            font-size: 16px;
+        }
+
+        .summary div {
+            display: flex;
+            justify-content: space-between;
+            margin: 8px 0;
+        }
+
+        .summary .result {
+            font-size: 18px;
+            font-weight: bold;
+            color: #27ae60;
+            border-top: 1px dashed #aaa;
+            padding-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<div class="marksheet">
+
+    <div class="header">
+        <h1>S.S Agrawal College,Navsari</h1>
+        <p>Statement of Marks</p>
+        <p>Academic Year: 2024–25</p>
+    </div>
+
+    <div class="student-info">
+        <div class="info-box"><strong>Name:</strong> <span id="s_name">Ruchi Kanjani</span></div>
+        <div class="info-box"><strong>Department:</strong> Computer Science</div>
+        <div class="info-box"><strong>Division:</strong> <span id="div">A</span></div>
+        <div class="info-box"><strong>Semester:</strong> <span id="semester">IV</span></div>
+        <div class="info-box"><strong>Enrollment No:</strong> <span id="enrollment_no">21CS045</span></div>
+        <div class="info-box"><strong>Seat No:</strong> <span id="seat_no">458721</span></div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Max Marks</th>
+                <th>Marks Obtained</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Data Structures</td><td>100</td><td><span id="sub_1">82</span></td></tr>
+            <tr><td>Operating Systems</td><td>100</td><td><span id="sub_2">78</span></td></tr>
+            <tr><td>DBMS</td><td>100</td><td><span id="sub_3">85</span></td></tr>
+            <tr><td>Computer Networks</td><td>100</td><td><span id="sub_4">74</span></td></tr>
+            <tr><td>Software Engineering</td><td>100</td><td><span id="sub_5">80</span></td></tr>
+        </tbody>
+    </table>
+
+    <div class="summary">
+        <div>
+            <span>Total Marks</span>
+            <span><span id="total">399</span> / 500</span>
+        </div>
+        <div>
+            <span>Average Marks</span>
+            <span id="average">79.8</span>
+        </div>
+        <div>
+            <span>Percentage</span>
+            <span id="percentage">79.8 <span>%</span></span>
+        </div>
+        <div>
+            <span>Grade</span>
+            <span id="grade">A</span>
+        </div>
+        <div class="result">
+            <span>Result</span>
+            <span id="result">PASS</span>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="badge">Verified</div>
+        <p>This is a computer-generated marksheet</p>
+    </div>
+
+</div>
+<script src="./js/script.js"></script>
+</body>
+</html>

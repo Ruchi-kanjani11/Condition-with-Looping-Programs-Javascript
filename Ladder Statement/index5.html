@@ -1,0 +1,29 @@
+<!-- 
+25000 5 50
+15000 3 30
+10000 2 15
+0 
+-->
+<script>
+    let salary = parseInt(prompt("Enter Salary:"));
+    let experience = parseInt(prompt("Enter Experience:"));
+    let bonus = 0;
+    if (salary >= 25000 && experience >= 5) {
+        bonus = salary * 0.5;
+    }
+    else if (salary >= 15000 && experience >= 3) {
+        bonus = salary * 0.3;
+    }
+    else if (salary >= 10000 && experience >= 2) {
+        bonus = salary * 0.15;
+    }
+    else {
+        bonus = salary * 0;
+    }
+    let TotalAmt = salary + bonus;
+
+    console.log("Salary is: ", salary);
+    console.log("Experience is: ", experience);
+    console.log("Bonus is: ", bonus);
+    console.log("Total Amount is: ", TotalAmt);
+</script>
